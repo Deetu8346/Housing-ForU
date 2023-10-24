@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i></a>
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
       <a href="526894587"><i class="fa fa-phone"></i></a>
-      <a href="https://github.com/alkatrivedi/Apartment-Management-System"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/Deetu8346/Apartment-Management-System"><i class="fab fa-github"></i></a>
 
       <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     </div>
