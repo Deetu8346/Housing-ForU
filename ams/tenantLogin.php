@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // If result matched $myusername and $mypassword, table row must be 1 row
 
-  if ($count == 1) {
+  if ($count == 1 && password_verify($password, $user['password'])) {
     $who = 't';
     $_SESSION['user'] = $row['name'];
     $_SESSION['loggedin'] = true;
