@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $phn4 = $_POST['phn'];
   $aid4 = $_POST['getap'];
   $rent4 = $_POST['rent'];
-
+  $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
   $sql = "SELECT * FROM tenant WHERE email = '$mail4' OR aid= $aid4";
   mysqli_query($db, $sql) or die('error querring database.');
@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($count == 0) {
 
     $sql = "INSERT into tenant ( email, password, name, phone, aid, rent) VALUES ( '$mail4', '$password4', '$name4', '$phn4', $aid4, $rent4)";
+    $stmt->bind_param("sssss", $name, $email, $hashed_password, $phone, $rent);
     $result = mysqli_query($db, $sql);
     header("location:myTenants.php");
   } else {
